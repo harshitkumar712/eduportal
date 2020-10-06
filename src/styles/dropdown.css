@@ -1,0 +1,10 @@
+.drop-text a{
+	text-decoration:none !important;
+	color:black;
+	
+ font-size:1.2rem;
+}
+
+.drop-outer {
+	margin:.5rem;
+}

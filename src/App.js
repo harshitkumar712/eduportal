@@ -1,5 +1,5 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min";
+// import "bootstrap/dist/css/bootstrap.min";
 import "./App.css";
 
 import Header from "./components/Header";

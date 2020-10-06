@@ -3,15 +3,15 @@ import React from "react";
 import "./App.css";
 
 import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Content from "./components/Content";
+// import Footer from "./components/Footer";
+// import Content from "./components/Content";
 import Menu from "./components/Menu";
-import HomeTotal from "./components/HomeTotal";
-import HomeTable from "./components/HomeTable";
+// import HomeTotal from "./components/HomeTotal";
+// import HomeTable from "./components/HomeTable";
 import AdminLogin from "./components/AdminLogin";
 import AdminHome from "./components/AdminHome";
-import Layout from "./components/Layout";
-import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
+// import Layout from "./components/Layout";
+import { Route, BrowserRouter as Router } from "react-router-dom";
 function App() {
   return (
     <div className="App">

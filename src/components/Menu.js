@@ -13,7 +13,7 @@ const MenuData = [
 	{ id: 8, title: "ARTICLES",icon:'fas fa-bookmark' },
 ];
 
-const Menu = ({flag}) => {
+const Menu = ({flag,onclick}) => {
 	const showDropdown = (e) => {
 		const drop = e.target.querySelector(".drop");
 		const rotate = e.target.querySelector(".angle");
@@ -44,10 +44,11 @@ const Menu = ({flag}) => {
 		<div className={flag?'menu active':'menu'}>
 			<ul className="menu-items">
 				<li className="menu-header">
-					{/* <a to="#" className="cross"> */}
-					{/* 	<i className="fas fa-times"></i> */}
-					{/* </a> */}
-					ADMIN
+					
+					<div className="menu-header-text">ADMIN</div>
+					<div className="cross" onClick={onclick}>
+						<i className="fas fa-times"></i>
+					</div>
 				</li>
 				{mData}
 			</ul>

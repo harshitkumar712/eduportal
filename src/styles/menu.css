@@ -13,7 +13,7 @@
 	justify-content:center;
 	position:fixed;
 	top:0;
-	z-index:1;
+	z-index:20;
 	overflow:auto;
 }
 .menu-header{
@@ -99,17 +99,32 @@ transition:.5s;
 	
 }
 
-@media screen and (max-width: 1024px){
+.cross{
+	display:none;
+}
+
+@media screen and (max-width: 1920px){
 	.menu{
-		position:absolute;
+		position:fixed;
 		left:-100%;
 		transition:0.5s;
-		z-index:1;
 		width:250px;
+
 	}
 	.menu.active{
 		left:0;
 		transition:1s;
+	}
+	.cross{
+		display:block;
+		cursor:pointer;
+		margin-right:1rem;
+	}
+	.menu-header{
+		justify-content:space-between;
+	}
+	.menu-header-text{
+		margin-left:1rem;
 	}
 }
 

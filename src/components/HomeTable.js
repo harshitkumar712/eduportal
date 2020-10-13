@@ -25,8 +25,8 @@ const HomeTable = () => {
 		);
 	});
 
-	return <div className="table-container">
-		<div  className="table-item">
+	return <div className="table-container ">
+		<div  className="table-item ">
 				<div className="table-header">Top Recent Articles</div>
 				<table>
 					<thead>

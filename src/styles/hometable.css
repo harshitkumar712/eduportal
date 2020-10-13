@@ -1,10 +1,11 @@
 .table-container{
 	display:flex;
-
 	flex-direction:column;
-	margin-left:275px;
+	/*margin-left:275px;*/
 	border:2px solid #A81838;
 	margin-top:20px;
+	overflow-x:auto;
+	
 }
 
 .table-header{
@@ -14,21 +15,24 @@
 	margin:.5rem;
 }
 
+
 table{
 	width: -webkit-fill-available;
 	border:1.5px solid #A81838;
 	border-collapse:collapse;
 	margin:.5rem;
 
+
 }
 th{
 	background:#A81838;
-	font-size:1rem;
+	font-size:.85rem;
 	color:white;
 	margin:.6rem;
-
+font-weight:400;
 }
 td{
+	font-size:1rem;
 	padding:.2rem;
 }
 
@@ -42,3 +46,12 @@ th:not(:last-child){
 td:not(:last-child){
 	border-right: 1.5px solid #A81838;
 }
+
+
+
+
+
+
+
+
+

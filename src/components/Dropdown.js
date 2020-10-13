@@ -2,12 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/dropdown.css";
 const DropdownData = [
-	{ id: 1, subtitle: "Add Category", path: "/admin/addcategory" },
-	{ id: 2, subtitle: "Add Article", path: "/admin/addarticle" },
-	{ id: 1, subtitle: "View Category", path: "/admin/viewcategory" },
-	{ id: 2, subtitle: "View Article", path: "/admin/viewarticle" },
-	{ id: 3, subtitle: "Add Content", path: "/admin/addarticle" },
-	{ id: 3, subtitle: "View Content", path: "/admin/addarticle" },
+	{ id: 1, subtitle: "Back to Home", path: "/admin" },
+	{ id: 2, subtitle: "View Users", path: "/admin/viewuser" },
+	{ id: 3, subtitle: "Add Sub Admin", path: "/admin/addsubadmin" },
+	{ id: 3, subtitle: "View Sub Admin", path: "/admin/viewsubadmin" },
+	{ id: 4, subtitle: "Add Category", path: "/admin/addcategory" },
+	{ id: 4, subtitle: "View Category", path: "/admin/viewcategory" },
+	{ id: 6, subtitle: "View Videos", path: "/admin/viewvideos" },
+	{ id: 8, subtitle: "Add Article", path: "/admin/addarticle" },
+	{ id: 8, subtitle: "View Article", path: "/admin/viewarticle" },
+	
 ];
 
 const Dropdown = ({ onclick,barid }) => {

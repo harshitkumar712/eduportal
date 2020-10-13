@@ -1,19 +1,24 @@
 .total-container{
 	display:flex;
 	flex-direction:column;
-	margin-left:275px;
+	/*margin-left:275px;*/
 	margin-top:20px;
+	
 }
 
 .detail-container{
 	margin-left:.5rem;
 	display:flex;
 	flex-direction:column;
-	justify-content:flex-start;
+	justify-content:flex-start; 
 	align-items:flex-start;
 }
 .detail-container p{
-  font-size:1.5rem;
+  font-size:1.4rem;
+  font-weight:bold;
+}
+.detail-container h2{
+  font-size:1.6rem;
 }
 
 .total-item{

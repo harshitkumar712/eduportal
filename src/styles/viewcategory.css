@@ -1,0 +1,18 @@
+.viewcategory{
+	margin-top:10vh;
+}
+
+.filter-header,.c-details-header{
+background:#A81838;
+	font-size:1.5rem;
+	color:white;
+	text-align:center;
+}
+
+.c-details-page{
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	height:auto;
+	flex-wrap:wrap;
+}

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import Header from "./Header";
 import "../styles/addcategory.css";
 import axios from "axios";
 import qs from "qs";
@@ -35,7 +35,7 @@ class AddCategory extends Component {
 
     axios({
       method: "post",
-      url: "url",
+      url: "https://ptsv2.com/t/t2bd8-1601375113/post",
       data: qs.stringify(data),
     })
       .then((response) => {
@@ -61,6 +61,8 @@ class AddCategory extends Component {
 
   render() {
     return (
+      <div>
+        <Header props={this.props} />
       <div className="addcategory">
         <div className="container">
           <div className="wrapper">
@@ -113,15 +115,18 @@ class AddCategory extends Component {
                   className="form-control"
                 />
                 <br />
+                <div style={{textAlign:'center'}}>
                 <input
                   type="submit"
                   name="submit"
                   className="btn btn-primary"
                 />
+                </div>
               </div>
             </form>
           </div>
         </div>
+      </div>
       </div>
     );
   }

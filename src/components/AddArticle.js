@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import CKEditor from "@ckeditor/ckeditor5-react";
-
+import Header from "./Header";
  import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 // import ClassicEditor from "../../services/ckeditor5-build-classic";
 import "../styles/addarticle.css";
@@ -49,7 +49,7 @@ class AddArticle extends Component {
 
 axios({
       method: "post",
-      url: "http://13.59.47.18:8081/home/FormData",
+      url: "https://ptsv2.com/t/t2bd8-1601375113/post",
       data: qs.stringify(data)
     })
       .then((response) => {
@@ -75,6 +75,8 @@ axios({
 
   render() {
     return (
+      <div>
+        <Header props={this.props} />
       <div className="addarticle">
         <div className="container">
           <div className="wrapper">
@@ -143,15 +145,18 @@ axios({
                   </label>
                 </div>
                 <br/>
+                <div style={{textAlign:'center'}}>
                 <input
                   type="submit"
                   name="submit"
                   className="btn btn-primary"
                 />
+                </div>
               </div>
             </form>
           </div>
         </div>
+      </div>
       </div>
     );
   }

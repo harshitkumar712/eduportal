@@ -1,5 +1,6 @@
 .viewcategory{
 	margin-top:10vh;
+	margin-left:18vw;	
 }
 
 .filter-header,.c-details-header{
@@ -15,4 +16,22 @@ background:#A81838;
 	align-items:center;
 	height:auto;
 	flex-wrap:wrap;
+	margin:1rem ; 
 }
+
+.category-filter-container,.category-details-container{
+	border:2px solid #A81838;
+	margin:1rem 0;
+}
+.category-filter,.category-details{
+	padding:1rem;
+}
+.category-filter-form{
+	margin:1rem 0;
+}
+
+@media screen and (max-width: 1024px){
+	.viewcategory{
+	margin-left:0;
+}
+	}

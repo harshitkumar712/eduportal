@@ -69,6 +69,7 @@
 	/*display:block;*/
 cursor:pointer;
 border-bottom: 1.2px solid rgba(0,0,0,.25);
+text-align:center;
 }
 
 .menu-text :hover{
@@ -103,7 +104,7 @@ transition:.5s;
 	display:none;
 }
 
-@media screen and (max-width: 1920px){
+@media screen and (max-width: 1024px){
 	.menu{
 		position:fixed;
 		left:-100%;

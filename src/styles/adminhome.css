@@ -1,4 +1,10 @@
 .adminhome{
 	margin-top:10vh;
-	/*margin-left:18vw;*/
+	margin-left:18vw;
 }
+
+@media screen and (max-width: 1024px){
+	.adminhome{
+	margin-left:0;
+}
+	}

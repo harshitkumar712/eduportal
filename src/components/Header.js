@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import "../styles/header.css";
 import Menu from "./Menu";
-const Header = () => {
+const Header = ({props}) => {
 	const [sidebar, setSidebar] = useState(false);
 
 	const showSidebar = () => setSidebar(!sidebar);
+
+const handleLogout=()=>{
+	props.history.push('/');
+}
 
 	return (
 		<div>
@@ -12,7 +16,7 @@ const Header = () => {
 				<div className="bars" onClick={showSidebar}>
 					<i className="fas fa-bars"></i>
 				</div>
-				<div className="logout-container">
+				<div className="logout-container" onClick={handleLogout}>
 					<i className="fas fa-sign-out-alt sign-out"></i>
 					<div className="logout-text">LOGOUT</div>
 				</div>

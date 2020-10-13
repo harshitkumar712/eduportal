@@ -5,7 +5,7 @@
 	border:2px solid #A81838;
 	margin-top:20px;
 	overflow-x:auto;
-	
+	text-align:center;
 }
 
 .table-header{
@@ -21,7 +21,7 @@ table{
 	border:1.5px solid #A81838;
 	border-collapse:collapse;
 	margin:.5rem;
-
+text-align:center;
 
 }
 th{

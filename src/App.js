@@ -26,7 +26,7 @@ function App() {
     <div className="App">
       <Router>
         <div>
-           <Header />
+           {/* <Header /> */}
           <Route exact path="/" component={AdminLogin}></Route>
           <Route exact path="/admin" component={AdminHome}></Route>
           {/* <Route path ='/admin/home' component={AdminHome}></Route> */}

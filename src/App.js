@@ -1,11 +1,9 @@
 import React from "react";
 // import "bootstrap/dist/css/bootstrap.min";
 import "./App.css";
-
-import Header from "./components/Header";
 // import Footer from "./components/Footer";
 // import Content from "./components/Content";
-import Menu from "./components/Menu";
+// import Menu from "./components/Menu";
 import AddArticle from './components/AddArticle'
 import AddCategory from './components/AddCategory'
 import ViewCategory from './components/ViewCategory'
@@ -13,7 +11,7 @@ import ViewCategory from './components/ViewCategory'
 // import HomeTable from "./components/HomeTable";
 import AdminLogin from "./components/AdminLogin";
 import AdminHome from "./components/AdminHome";
-import Layout from "./components/Layout";
+// import Layout from "./components/Layout";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, BrowserRouter as Router } from "react-router-dom";
 function App() {

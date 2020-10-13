@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./Header";
-import Menu from "./Menu";
+// import Menu from "./Menu";
 import AdminHome from './AdminHome'
 import "bootstrap/dist/css/bootstrap.min.css";
 

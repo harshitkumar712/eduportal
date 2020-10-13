@@ -14,7 +14,7 @@ const Pagination=({perPage,totalLength,paginate,currentPage})=>{
 		<ul className="pagination">
 			{pageNumbers.map((number)=>(
 
-				<li style={{cursor:'pointer'}} key={number} className="page-item"><a onClick={()=>paginate(number)} className="page-link">{number} </a> </li>
+				<li style={{cursor:'pointer'}} key={number} className="page-item"><button onClick={()=>paginate(number)} className="page-link">{number} </button> </li>
 				))}
 		</ul>
 	</nav>

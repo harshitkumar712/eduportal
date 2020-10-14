@@ -1,16 +1,16 @@
-.viewcategory{
+.viewarticle{
 	margin-top:10vh;
 	margin-left:18vw;	
 }
 
-.c-filter-header,.c-details-header{
+.a-filter-header,.a-details-header{
 background:#A81838;
 	font-size:1.5rem;
 	color:white;
 	text-align:center;
 }
 
-.c-details-page{
+.a-details-page{
 	display:flex;
 	justify-content:space-between;
 	align-items:center;
@@ -19,19 +19,19 @@ background:#A81838;
 	margin:1rem ; 
 }
 
-.category-filter-container,.category-details-container{
+.article-filter-container,.article-details-container{
 	border:2px solid #A81838;
 	margin:1rem 0;
 }
-.category-filter,.category-details{
+.article-filter,.article-details{
 	padding:1rem;
 }
-.category-filter-form{
+.article-filter-form{
 	margin:1rem 0;
 }
 
 @media screen and (max-width: 1024px){
-	.viewcategory{
+	.article{
 	margin-left:0;
 }
 	}

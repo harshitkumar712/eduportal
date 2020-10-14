@@ -1,13 +1,13 @@
 import React,{useState,useEffect} from 'react';
-import ViewCategoryTable from './ViewCategoryTable';
+import ViewArticleTable from './ViewArticleTable';
 import Pagination from './Pagination'
 import axios from "axios";
 import Header from "./Header";
-import '../styles/viewcategory.css'
+import '../styles/viewarticle.css'
 
 
-const ViewCategory=(props)=>{
-	const[categoryData,setCategoryData]=useState([]);
+const ViewArticle=(props)=>{
+	const[articleData,setArticleData]=useState([]);
 	// const[loading,setLoading]=useState(false);
 	const [currentPage,setCurrentPage]=useState(1);
 	const [perPage,setPerPage]=useState(10);
@@ -18,7 +18,7 @@ const ViewCategory=(props)=>{
       url: "https://jsonplaceholder.typicode.com/posts",
     }).then((result) => {
     	console.log(result.data);
-       setCategoryData(result.data);
+       setArticleData(result.data);
     });
 
 
@@ -27,7 +27,7 @@ const ViewCategory=(props)=>{
 
 const indexOfLast=currentPage*perPage;
 const indexOfFirst=indexOfLast-perPage;
-const currentData=categoryData.slice(indexOfFirst,indexOfLast);
+const currentData=articleData.slice(indexOfFirst,indexOfLast);
 
 const paginate =(pageNumber)=>{
 	setCurrentPage(pageNumber)
@@ -41,12 +41,12 @@ const handlePerPage=(e)=>{
 	return(
 	 <div>
     <Header props={props} />
-	 	<div className="viewcategory ">
+	 	<div className="viewarticle">
       <div className=" container-fluid">
-<div className="category-filter-container">
-  <div className="category-filter">
-	<div className="c-filter-header">Category Filter Form</div>
-<form className="category-filter-form" >
+<div className="article-filter-container">
+  <div className="article-filter">
+	<div className="a-filter-header">Article Filter Form</div>
+<form className="article-filter-form" >
   <div className="row">
     <div className="col">
     	<label 	>Enter ID</label>
@@ -74,18 +74,18 @@ const handlePerPage=(e)=>{
 </div>
 </div>
 
-<div className="category-details-container">
-  <div className="category-details">
-	<div className="c-details-header">
-		View Category Details
+<div className="article-details-container">
+  <div className="article-details">
+	<div className="a-details-header">
+		View Article Details
 	</div>
-	<div className="c-details-page">
+	<div className="a-details-page">
 		<div>
-			<div>Total Count:{categoryData.length}</div>
+			<div>Total Count:{articleData.length}</div>
 	<p>Rows per Page &nbsp;
 	<input onChange={handlePerPage} type="number"  min="10" max="50" step="10"/></p></div>
-<Pagination perPage={perPage} totalLength={categoryData.length} paginate={paginate} currentPage={currentPage} /></div>
-<ViewCategoryTable categoryData={currentData}/>
+<Pagination perPage={perPage} totalLength={articleData.length} paginate={paginate} currentPage={currentPage} /></div>
+<ViewArticleTable articleData={currentData}/>
 </div>
 </div>
 
@@ -97,4 +97,4 @@ const handlePerPage=(e)=>{
 		)
 }
 
-export default ViewCategory;
+export default ViewArticle;

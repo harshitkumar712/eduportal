@@ -7,6 +7,7 @@ import "./App.css";
 import AddArticle from './components/AddArticle'
 import AddCategory from './components/AddCategory'
 import ViewCategory from './components/ViewCategory'
+import ViewArticle from './components/ViewArticle'
 // import HomeTotal from "./components/HomeTotal";
 // import HomeTable from "./components/HomeTable";
 import AdminLogin from "./components/AdminLogin";
@@ -29,7 +30,7 @@ function App() {
           <Route exact path="/admin" component={AdminHome}></Route>
           {/* <Route path ='/admin/home' component={AdminHome}></Route> */}
           <Route path ='/admin/addarticle' component={AddArticle}></Route>
-          {/* <Route path ='/admin/viewarticle' component={ViewArticle}></Route> */}
+          <Route path ='/admin/viewarticle' component={ViewArticle}></Route>
           <Route path ='/admin/addcategory' component={AddCategory}></Route>
           <Route path ='/admin/viewcategory' component={ViewCategory}></Route>
         </div>

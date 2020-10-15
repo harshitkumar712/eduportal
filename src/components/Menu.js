@@ -16,8 +16,10 @@ const MenuData = [
 
 const Menu = ({flag,onclick}) => {
 	const showDropdown = (e) => {
-		const drop = e.target.querySelector(".drop");
-		const rotate = e.target.querySelector(".angle");
+		// const drop = e.target.parentNode.querySelector(".drop");
+		// const rotate = e.target.parentNode.querySelector(".angle");
+		const drop = e.target.closest('li').querySelector(".drop");
+		const rotate = e.target.closest('li').querySelector(".angle");
 		drop.classList.toggle("active");
 		rotate.classList.toggle("down");
 	};
@@ -27,16 +29,17 @@ const Menu = ({flag,onclick}) => {
 				<div className="menu-div" onClick={showDropdown}   >
 					<i
 						className={item.icon}
-						onClick={(e) => e.stopPropagation()} style={{float:'left'}}
+						 style={{float:'left'}}
 					></i>
 					{item.title}<i
 						className="angle fas fa-angle-right"
-						onClick={(e) => e.stopPropagation()} style={{float:'right'}}
+						style={{float:'right'}}
 					></i>
-					<div onClick={(e) => e.stopPropagation()} className="drop">
+					
+				</div>
+				<div  className="drop">
 						<Dropdown barid={item.id} />
 					</div>
-				</div>
 			</li>
 		);
 	});

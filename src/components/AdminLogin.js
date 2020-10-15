@@ -53,7 +53,8 @@ console.log(this.state.username,this.state.password)
     return (
       <div className="login-container" style={ back }>
 
-<div className='login-header'><h1 >Education Portal</h1><p>Empowering students to create solutions for tomorrow’s challenges.</p></div>
+<div className='login-header'>
+  <h1 >Education Portal</h1><p>Empowering students to create solutions for tomorrow’s challenges.</p></div>
 
       <div className="login-form">
         <h2>ADMIN LOGIN</h2>

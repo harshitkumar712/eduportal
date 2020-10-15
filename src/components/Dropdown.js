@@ -18,7 +18,8 @@ const Dropdown = ({ onclick,barid }) => {
 	const dData = DropdownData.filter((item)=>barid===item.id).map((item, index) => {
 		return (
 			<div key={index} className="drop-text" onClick={onclick} >
-				<Link to={item.path}>&#8208;&nbsp;{item.subtitle.toUpperCase()}</Link>
+				{/* <Link to={item.path}>{item.subtitle.toUpperCase()}</Link> */}
+				<Link to={item.path}>{item.subtitle}</Link>
 			</div>
 		);
 	});

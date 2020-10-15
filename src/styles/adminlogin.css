@@ -17,6 +17,7 @@
 .login-header p{
   font-size:1.4rem;
 }
+
 .login-form {
   width: 40vw;
   display: flex;
@@ -40,6 +41,7 @@ box-shadow: 3px 6px 10px 0px rgba(168,24,56,1);
     border-radius: 0.5rem;
 
 }
+
 
 .form-input {
   background: none;

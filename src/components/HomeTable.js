@@ -28,6 +28,7 @@ const HomeTable = () => {
 	return <div className="table-container ">
 		<div  className="table-item ">
 				<div className="table-header">Top Recent Articles</div>
+				<div style={{overflowX:'auto'}}>
 				<table>
 					<thead>
 					<tr>
@@ -40,6 +41,7 @@ const HomeTable = () => {
 					</tr></thead>
 					<tbody>{row}</tbody>
 				</table>
+			</div>
 			</div>
 
 

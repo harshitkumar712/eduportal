@@ -1,10 +1,19 @@
 .drop-text a{
 	text-decoration:none !important;
-	color:black;
+	color:white;
 	
  font-size:1.2rem;
 }
 
+.drop-text a:hover{
+	text-decoration:none;
+	color:white;
+ font-size:1.2rem;
+}
+
+.drop-text{
+	text-align:center;
+}
 .drop-outer {
-	margin:.5rem;
+	/*margin:.5rem;*/
 }

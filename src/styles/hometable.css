@@ -48,7 +48,15 @@ td:not(:last-child){
 }
 
 
-
+@media screen and (max-width: 1024px){
+	table{
+	width:100%;
+}
+/*td{
+	font-size:1rem;
+	margin:0 .5rem ; 
+}*/
+	}
 
 
 

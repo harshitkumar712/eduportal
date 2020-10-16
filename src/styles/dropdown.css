@@ -1,19 +1,43 @@
-.drop-text a{
+.drop-outer a{
 	text-decoration:none !important;
 	color:white;
 	
  font-size:1.2rem;
+
 }
 
-.drop-text a:hover{
+.drop-outer a:hover{
 	text-decoration:none;
 	color:white;
  font-size:1.2rem;
 }
 
-.drop-text{
+.drop-outer{
 	text-align:center;
+	
+	
 }
-.drop-outer {
-	/*margin:.5rem;*/
+.drop-inner{
+	/*margin:auto;*/
+}
+
+.drop-text{
+	/*border-left:3px solid white;*/
+	padding:2.5px 0;
+	margin:2.5px 0;
+	display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.circle{
+	height:12px;
+	width:12px;
+	border-radius:50%;
+	margin-right:10px;
+	border:2px solid white;
+}
+.circle.focus{
+	background:white;
+
 }

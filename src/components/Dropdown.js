@@ -11,20 +11,38 @@ const DropdownData = [
 	{ id: 7, subtitle: "View Videos", path: "/admin/viewvideos" },
 	{ id: 5, subtitle: "Add Article", path: "/admin/addarticle" },
 	{ id: 5, subtitle: "View Article", path: "/admin/viewarticle" },
-	
 ];
 
-const Dropdown = ({ onclick,barid }) => {
-	const dData = DropdownData.filter((item)=>barid===item.id).map((item, index) => {
-		return (
-			<div key={index} className="drop-text" onClick={onclick} >
-				{/* <Link to={item.path}>{item.subtitle.toUpperCase()}</Link> */}
-				<Link to={item.path}>{item.subtitle}</Link>
-			</div>
-		);
-	});
+const Dropdown = ({ onclick, barid }) => {
+	const toggleHoverOn = (e) => {
+		const focus = e.target.closest("a").querySelector(".circle");
+		focus.classList.add("focus");
+	};
+	const toggleHoverOff = (e) => {
+		const focus = e.target.closest("a").querySelector(".circle");
+		focus.classList.remove("focus");
+	};
+	const dData = DropdownData.filter((item) => barid === item.id).map(
+		(item, index) => {
+			return (
+				<Link
+					to={item.path}
+					onMouseEnter={toggleHoverOn}
+					onMouseLeave={toggleHoverOff}
+					key={index}
+				>
+					<div className="drop-text" onClick={onclick}>
+						{/* <Link to={item.path}>{item.subtitle.toUpperCase()}</Link> */}
 
-	return <div className="drop-outer" >{dData}</div>;
+						<div className="drop-inner">{item.subtitle}</div>
+						<div className="circle"> </div>
+					</div>
+				</Link>
+			);
+		}
+	);
+
+	return <div className="drop-outer">{dData}</div>;
 };
 
 export default Dropdown;

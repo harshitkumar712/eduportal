@@ -31,7 +31,6 @@ class AddCategory extends Component {
       Author: this.state.Author,
     };
 
-    // axios.post('http://13.59.47.18:8081/home/FormData',this.state)
 
     axios({
       method: "post",

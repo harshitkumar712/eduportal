@@ -27,9 +27,6 @@
   background:#A81838;
   color:white;
   border-radius:.5rem;
-  -webkit-box-shadow: 3px 6px 10px 0px rgba(168,24,56,1);
--moz-box-shadow: 3px 6px 10px 0px rgba(168,24,56,1);
-box-shadow: 3px 6px 10px 0px rgba(168,24,56,1);
 }
 
 .login-button{

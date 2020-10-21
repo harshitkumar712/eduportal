@@ -7,7 +7,9 @@ const Header = ({props}) => {
 	const showSidebar = () => setSidebar(!sidebar);
 
 const handleLogout=()=>{
+	localStorage.clear();
 	props.history.push('/');
+
 }
 
 	return (

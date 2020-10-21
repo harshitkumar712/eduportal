@@ -17,6 +17,7 @@ class AdminLogin extends React.Component {
     this.state = {
       username: "",
       password: "",
+      error:'',
     };
   }
   handleSubmit = (e) => {
@@ -27,22 +28,37 @@ console.log(this.state.username,this.state.password)
       username: this.state.username,
       password: this.state.password,
     };
+    // console.log(qs.stringify(data))
+    // console.log(decodeURIComponent(qs.stringify(data)))
     axios({
-      method: "post",
-      url: "https://ptsv2.com/t/t2bd8-1601375113/post",
-      data: qs.stringify(data),
+      method: "get",
+       url: `http://192.187.126.18:8082/home/login?username=${data.username}&password=${data.password}`,
+      // url: 'http://192.187.126.18:8082/home/login',
+      // data: decodeURIComponent(qs.stringify(data)),
     })
       .then((response) => {
+        const responseData=response.data;
+        if(!responseData.msgType){
+          console.log(responseData);
+          localStorage.setItem('id',responseData.Lid );
+  localStorage.setItem('type', responseData.LoginType);
         
-        console.log(response);
-      localStorage.setItem('auth',JSON.stringify(response.data));
+           this.props.history.push('/admin');
+        }
+        else{
+           this.setState({error:responseData.Message})
+        }
+       // localStorage.setItem('auth',JSON.stringify(response.data));
        
       })
       .catch((error) => {
         console.log(error);
       });
+
   this.setState({ username: "", password: "" });
-  this.props.history.push('/admin');
+  
+        
+ 
   };
   handleChange = (e) => {
     const { value, name } = e.target;
@@ -57,7 +73,9 @@ console.log(this.state.username,this.state.password)
   <h1 >Education Portal</h1><p>Empowering students to create solutions for tomorrow’s challenges.</p></div>
 
       <div className="login-form">
+       
         <h2>ADMIN LOGIN</h2>
+         <div className='login-form-error'>{this.state.error}</div>
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="username">Username</label>
           <input
@@ -79,9 +97,11 @@ console.log(this.state.username,this.state.password)
             value={this.state.password}
             required
           />
+
           <button className="login-button" onClick={this.handleSubmit} type="submit">Sign In</button>
           
         </form>
+
       </div></div>
     );
   }

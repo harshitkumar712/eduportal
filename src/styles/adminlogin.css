@@ -38,6 +38,12 @@
     border-radius: 0.5rem;
 
 }
+.login-form-error{
+  background:rgba(128,128,128,0.2);
+border-radius:5px;
+  text-align:center;
+  
+}
 
 
 .form-input {

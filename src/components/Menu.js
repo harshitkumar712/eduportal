@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import "../styles/menu.css";
 import Dropdown from "./Dropdown";
 
@@ -14,7 +14,13 @@ const MenuData = [
 	
 ];
 
+
+
 const Menu = ({flag,onclick}) => {
+	const [user,setUser]=useState('');
+useEffect(()=>{
+setUser(localStorage.getItem('type'));
+},[])
 	const showDropdown = (e) => {
 		// const drop = e.target.parentNode.querySelector(".drop");
 		// const rotate = e.target.parentNode.querySelector(".angle");
@@ -49,7 +55,7 @@ const Menu = ({flag,onclick}) => {
 			<ul className="menu-items">
 				<li className="menu-header">
 					
-					<div className="menu-header-text">ADMIN</div>
+					<div className="menu-header-text">{user.toUpperCase()}</div>
 					<div className="cross" onClick={onclick}>
 						<i className="fas fa-times"></i>
 					</div>

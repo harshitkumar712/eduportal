@@ -8,9 +8,10 @@ const DropdownData = [
 	{ id: 3, subtitle: "View Sub Admin", path: "/admin/viewsubadmin" },
 	{ id: 4, subtitle: "Add Category", path: "/admin/addcategory" },
 	{ id: 4, subtitle: "View Category", path: "/admin/viewcategory" },
+	{ id: 5, subtitle: "Add Sub-Category", path: "/admin/addsubcategory" },
 	{ id: 7, subtitle: "View Videos", path: "/admin/viewvideos" },
-	{ id: 5, subtitle: "Add Article", path: "/admin/addarticle" },
-	{ id: 5, subtitle: "View Article", path: "/admin/viewarticle" },
+	{ id: 6, subtitle: "Add Article", path: "/admin/addarticle" },
+	{ id: 6, subtitle: "View Article", path: "/admin/viewarticle" },
 ];
 
 const Dropdown = ({ onclick, barid }) => {

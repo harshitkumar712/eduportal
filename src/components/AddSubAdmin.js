@@ -1,23 +1,17 @@
 import React, { Component } from "react";
 import Header from "./Header";
-import "../styles/addcategory.css";
+import "../styles/addsubadmin.css";
 import axios from "axios";
 import qs from "qs";
 
-class AddCategory extends Component {
+class AddSubAdmin extends Component {
   state = {
     name: "",
-    // id: "",
-    // title: "",
-    description: "",
+   email:"",
+   password:'',
     date: "",
-    author: "",
-    lid: "",
+    
   };
-
-  componentDidMount() {
-    this.setState({ lid: localStorage.getItem("id") });
-  }
 
   handleInputChange = (event) => {
     const target = event.target;
@@ -31,19 +25,15 @@ class AddCategory extends Component {
     event.preventDefault();
     const data = {
       name: this.state.name,
-      // id: this.state.id,
-      // title: this.state.title,
-      description: this.state.description,
-      date: this.state.date,
-      author: this.state.author,
-      lid: this.state.lid,
+      email: this.state.email,
+       password: this.state.password,
+      date:this.state.date,
+     
     };
 
     axios({
       method: "post",
-      // url: "https://ptsv2.com/t/t2bd8-1601375113/post",
-      url: "http://192.187.126.18:8082/home/addCategory",
-
+      url: "https://ptsv2.com/t/t2bd8-1601375113/post",
       data: qs.stringify(data),
     })
       .then((response) => {
@@ -53,25 +43,13 @@ class AddCategory extends Component {
         console.log(error);
       });
 
-    //     axios({
-    //       method: "post",
-    //       url: "http://13.59.47.18:8081/home/FormData",
-    //
-    //       data: data,
-    //     })
-    //       .then((response) => {
-    //         console.log(response);
-    //       })
-    //       .catch((error) => {
-    //         console.log(error);
-    //       });
   };
 
   render() {
     return (
       <div>
         <Header props={this.props} />
-        <div className="addcategory">
+        <div className="addsubadmin">
           <div className="container">
             <div className="wrapper">
               <form className="form-group" onSubmit={this.handleSubmit}>
@@ -82,10 +60,9 @@ class AddCategory extends Component {
                     name="name"
                     value={this.state.name}
                     onChange={this.handleInputChange}
-                    placeholder="Enter Name of Category"
+                    placeholder="Enter SubAdmin Name"
                     className="form-control"
                   />
-                 
                   {/* <label>ID</label> */}
                   {/* <input */}
                   {/*   type="text" */}
@@ -104,6 +81,25 @@ class AddCategory extends Component {
                   {/*   placeholder="Enter Title" */}
                   {/*   className="form-control" */}
                   {/* /> */}
+                   <label>Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={this.state.email}
+                    onChange={this.handleInputChange}
+                    placeholder="Enter Email"
+                    className="form-control"
+                  />
+
+                  <label>Password</label>
+                  <input
+                    type="text"
+                    name="password"
+                    value={this.state.password}
+                    onChange={this.handleInputChange}
+                    placeholder="Enter Password"
+                    className="form-control"
+                  />
                   <label>Date</label>
                   <input
                     className="form-control"
@@ -111,27 +107,10 @@ class AddCategory extends Component {
                     value={this.state.date}
                     name="date"
                     onChange={this.handleInputChange}
+                  
                   />
 
-                  <label>Description</label>
-                  <input
-                    type="text"
-                    name="description"
-                    value={this.state.description}
-                    onChange={this.handleInputChange}
-                    placeholder="Enter Description"
-                    className="form-control"
-                  />
-
-                  <label>Author</label>
-                  <input
-                    type="text"
-                    name="author"
-                    value={this.state.author}
-                    onChange={this.handleInputChange}
-                    placeholder="Enter Author name"
-                    className="form-control"
-                  />
+                 
                   <br />
                   <div style={{ textAlign: "center" }}>
                     <input
@@ -150,4 +129,4 @@ class AddCategory extends Component {
   }
 }
 
-export default AddCategory;
+export default AddSubAdmin;

@@ -9,14 +9,21 @@ import qs from 'qs';
 
 class AddArticle extends Component {
   state = {
-    id: "",
+    // id: "",
+    lid:'',
+    // category:"",
+    satName:"",
+    date:"",
     title: "",
-    desc: "",
-    Author: "",
+    description: "",
+    author: "",
     is_Reviewd: 0,
     body: "",
   };
 
+componentDidMount() {
+   this.setState({lid:localStorage.getItem('id')});
+  } 
   handleChange = (event, editor) => {
     const data = editor.getData();
     this.setState({ body: data });
@@ -37,19 +44,23 @@ class AddArticle extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     const data = {
-      id: this.state.id,
+      // id: this.state.id,
+      // category:this.state.category,
+      satName:this.state.satName,
+      date:this.state.date,
       title: this.state.title,
-      desc: this.state.desc,
-      Author: this.state.Author,
-      is_Reviewd: this.state.is_Reviewd,
+      description: this.state.description,
+      author: this.state.author,
+      // is_Reviewd: this.state.is_Reviewd,
       body: this.state.body,
+      lid: this.state.lid,
     };
     
     // axios.post('http://13.59.47.18:8081/home/FormData',this.state)
 
 axios({
       method: "post",
-      url: "https://ptsv2.com/t/t2bd8-1601375113/post",
+      url: "http://192.187.126.18:8082/home/addArticles",
       data: qs.stringify(data)
     })
       .then((response) => {
@@ -82,16 +93,46 @@ axios({
           <div className="wrapper">
             <form className="form-group" onSubmit={this.handleSubmit}>
               <div className="form-group">
-                <label>ID</label>
+        {/*         <label>ID</label> */}
+        {/*         <input */}
+        {/*           type="text" */}
+        {/*           name="id" */}
+        {/*           value={this.state.id} */}
+        {/*  */}
+        {/*           onChange={this.handleInputChange} */}
+        {/*           placeholder="Enter ID" */}
+        {/*           className="form-control" */}
+        {/*         /> */}
+        {/*  <label>Enter Category</label> */}
+        {/*         <input */}
+        {/*           type="text" */}
+        {/*           name="category" */}
+        {/*           value={this.state.category} */}
+        {/*  */}
+        {/*           onChange={this.handleInputChange} */}
+        {/*           placeholder="Enter Category Name" */}
+        {/*           className="form-control" */}
+        {/*         /> */}
+                <label>Enter Sub-Category</label>
                 <input
                   type="text"
-                  name="id"
-                  value={this.state.id}
+                  name="satName"
+                  value={this.state.satName}
         
                   onChange={this.handleInputChange}
-                  placeholder="Enter ID"
+                  placeholder="Enter Sub-Category Name"
                   className="form-control"
                 />
+                 <label>Date</label>
+                 <input
+                    className="form-control"
+                    type="date"
+                    value={this.state.date}
+                    name="date"
+                    onChange={this.handleInputChange}
+                  
+                  />
+
                 <label>Title</label>
                 <input
                   type="text"
@@ -102,11 +143,12 @@ axios({
                   placeholder="Enter Title"
                   className="form-control"
                 />
+               
                 <label>Description</label>
                 <input
                   type="text"
-                  name="desc"
-                  value={this.state.desc}
+                  name="description"
+                  value={this.state.description}
           
                   onChange={this.handleInputChange}
                   placeholder="Enter Description"
@@ -123,11 +165,11 @@ axios({
                 <label>Author</label>
                 <input
                   type="text"
-                  name="Author"
-                  value={this.state.Author}
+                  name="author"
+                  value={this.state.author}
               
                   onChange={this.handleInputChange}
-                  placeholder="Enter author name"
+                  placeholder="Enter Author name"
                   className="form-control"
                 />
                 <div className="form-check">

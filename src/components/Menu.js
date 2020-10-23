@@ -7,8 +7,8 @@ const MenuData = [
 	{ id: 2, title: "USER LIST",icon:'fas fa-users' },
 	{ id: 3, title: "SUB ADMIN",icon:'fas fa-users' },
 	{ id: 4, title: "CATEGORIES",icon:'fas fa-list' },
-	{ id: 5, title: "ARTICLES",icon:'fas fa-bookmark' },
-	{ id: 6, title: "SUB CATEGORIES",icon:'fas fa-list-alt' },
+	{ id: 5, title: "SUB CATEGORIES",icon:'fas fa-list-alt' },
+	{ id: 6, title: "ARTICLES",icon:'fas fa-bookmark' },
 	{ id: 7, title: "VIDEOS",icon:'fas fa-video' },
 	{ id: 8, title: "SUBCRIPTION",icon:'fas fa-calendar-plus' },
 	

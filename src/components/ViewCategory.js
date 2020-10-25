@@ -129,7 +129,7 @@ const handleSubmit = (event) => {
                     value={inputFields.name}
                     onChange={handleInputChange}
                   >
-                   <option value=''>None of these</option>
+                   <option value=''>All of these</option>
                     <option value="aiims">AIIMS</option>
                     <option value="neet">NEET</option>
                     <option value="fet">FET</option>

@@ -7,10 +7,9 @@ import qs from "qs";
 class AddSubAdmin extends Component {
   state = {
     name: "",
-   email:"",
-   password:'',
+    email: "",
+    password: "",
     date: "",
-    
   };
 
   handleInputChange = (event) => {
@@ -26,9 +25,8 @@ class AddSubAdmin extends Component {
     const data = {
       name: this.state.name,
       email: this.state.email,
-       password: this.state.password,
-      date:this.state.date,
-     
+      password: this.state.password,
+      date: this.state.date,
     };
 
     axios({
@@ -42,7 +40,6 @@ class AddSubAdmin extends Component {
       .catch((error) => {
         console.log(error);
       });
-
   };
 
   render() {
@@ -81,7 +78,7 @@ class AddSubAdmin extends Component {
                   {/*   placeholder="Enter Title" */}
                   {/*   className="form-control" */}
                   {/* /> */}
-                   <label>Email</label>
+                  <label>Email</label>
                   <input
                     type="email"
                     name="email"
@@ -107,10 +104,8 @@ class AddSubAdmin extends Component {
                     value={this.state.date}
                     name="date"
                     onChange={this.handleInputChange}
-                  
                   />
 
-                 
                   <br />
                   <div style={{ textAlign: "center" }}>
                     <input

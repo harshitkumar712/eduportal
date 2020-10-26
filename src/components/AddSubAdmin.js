@@ -59,6 +59,7 @@ class AddSubAdmin extends Component {
                     onChange={this.handleInputChange}
                     placeholder="Enter SubAdmin Name"
                     className="form-control"
+                    required
                   />
                   {/* <label>ID</label> */}
                   {/* <input */}
@@ -86,6 +87,7 @@ class AddSubAdmin extends Component {
                     onChange={this.handleInputChange}
                     placeholder="Enter Email"
                     className="form-control"
+                    required
                   />
 
                   <label>Password</label>
@@ -96,6 +98,7 @@ class AddSubAdmin extends Component {
                     onChange={this.handleInputChange}
                     placeholder="Enter Password"
                     className="form-control"
+                    required
                   />
                   <label>Date</label>
                   <input
@@ -104,6 +107,7 @@ class AddSubAdmin extends Component {
                     value={this.state.date}
                     name="date"
                     onChange={this.handleInputChange}
+                    required
                   />
 
                   <br />
@@ -112,6 +116,7 @@ class AddSubAdmin extends Component {
                       type="submit"
                       name="submit"
                       className="btn btn-primary"
+                      required
                     />
                   </div>
                 </div>

@@ -84,6 +84,7 @@ class AddCategory extends Component {
                     onChange={this.handleInputChange}
                     placeholder="Enter Name of Category"
                     className="form-control"
+                    required
                   />
                  
                   {/* <label>ID</label> */}
@@ -111,6 +112,7 @@ class AddCategory extends Component {
                     value={this.state.date}
                     name="date"
                     onChange={this.handleInputChange}
+                    required
                   />
 
                   <label>Description</label>
@@ -121,6 +123,7 @@ class AddCategory extends Component {
                     onChange={this.handleInputChange}
                     placeholder="Enter Description"
                     className="form-control"
+                    required
                   />
 
                   <label>Author</label>
@@ -131,6 +134,7 @@ class AddCategory extends Component {
                     onChange={this.handleInputChange}
                     placeholder="Enter Author name"
                     className="form-control"
+                    required
                   />
                   <br />
                   <div style={{ textAlign: "center" }}>

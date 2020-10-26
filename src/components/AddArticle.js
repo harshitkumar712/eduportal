@@ -122,6 +122,7 @@ axios({
                   onChange={this.handleInputChange}
                   placeholder="Enter Sub-Category Name"
                   className="form-control"
+                  required
                 />
                  <label>Date</label>
                  <input
@@ -130,7 +131,7 @@ axios({
                     value={this.state.date}
                     name="date"
                     onChange={this.handleInputChange}
-                  
+                  required
                   />
 
                 <label>Title</label>
@@ -142,6 +143,7 @@ axios({
                   onChange={this.handleInputChange}
                   placeholder="Enter Title"
                   className="form-control"
+                  required
                 />
                
                 <label>Description</label>
@@ -153,6 +155,7 @@ axios({
                   onChange={this.handleInputChange}
                   placeholder="Enter Description"
                   className="form-control"
+                  required
                 />
                 <label>Body of Article</label>
 
@@ -171,6 +174,7 @@ axios({
                   onChange={this.handleInputChange}
                   placeholder="Enter Author name"
                   className="form-control"
+                  required
                 />
                 <div className="form-check">
                   <input

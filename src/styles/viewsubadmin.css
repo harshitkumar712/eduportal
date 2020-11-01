@@ -1,0 +1,10 @@
+.viewsubadmin{
+margin-top:10vh;
+	margin-left:18vw;	
+}
+
+@media screen and (max-width: 1024px){
+	.viewsubadmin{
+	margin-left:0;
+}
+	}

@@ -3,7 +3,7 @@ import "../styles/menu.css";
 import Dropdown from "./Dropdown";
 
 const MenuData = [
-	{ id: 1, title: "DASHBOARD", icon: "fas fa-home" },
+	// { id: 1, title: "DASHBOARD", icon: "fas fa-home" },
 	{ id: 2, title: "USER LIST", icon: "fas fa-users" },
 	{ id: 3, title: "SUB ADMIN", icon: "fas fa-users" },
 	{ id: 4, title: "CATEGORIES", icon: "fas fa-list" },
@@ -13,7 +13,7 @@ const MenuData = [
 	{ id: 8, title: "SUBCRIPTION", icon: "fas fa-calendar-plus" },
 ];
 
-const Menu = ({ flag, onclick }) => {
+const Menu = ({ flag, onclick,props }) => {
 	const [user, setUser] = useState("");
 	useEffect(() => {
 		setUser(localStorage.getItem("type"));
@@ -53,6 +53,16 @@ const Menu = ({ flag, onclick }) => {
 						<i className="fas fa-times"></i>
 					</div>
 				</li>
+				<li className="menu-text" >
+				<div className="menu-div" onClick={()=>props.history.push("/admin")}>
+					<i className='fas fa-home' style={{ float: "left" }}></i>
+					DASHBOARD
+					<i
+						className="dot fas fa-circle"
+						style={{ float: "right" }}
+					></i>
+				</div>
+			</li>
 				{mData}
 			</ul>
 		</div>

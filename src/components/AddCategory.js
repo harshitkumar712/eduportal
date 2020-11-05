@@ -3,9 +3,11 @@ import Header from "./Header";
 import "../styles/addcategory.css";
 import axios from "axios";
 import qs from "qs";
-
+import Modal from './Modal';
 class AddCategory extends Component {
   state = {
+     status:'',
+      modal:false,
     name: "",
     // id: "",
     // title: "",
@@ -47,7 +49,26 @@ class AddCategory extends Component {
       data: qs.stringify(data),
     })
       .then((response) => {
-        console.log(response);
+        const responseData = response.data;
+        console.log(responseData);
+
+       
+        if (!responseData.msgType) {
+          this.setState({
+            status:responseData.Message,
+            modal:true,
+            name: "",
+            description: "",
+            date: "",
+            author: "",
+          });
+        }
+        else{
+           this.setState({
+            status:responseData.Message,
+            modal:true,
+          });
+        }
       })
       .catch((error) => {
         console.log(error);
@@ -70,6 +91,9 @@ class AddCategory extends Component {
   render() {
     return (
       <div>
+         <Modal open={this.state.modal} close={()=>this.setState({modal:false})}>
+           {this.state.status}
+         </Modal>
         <Header props={this.props} />
         <div className="addcategory">
           <div className="container">
@@ -86,7 +110,7 @@ class AddCategory extends Component {
                     className="form-control"
                     required
                   />
-                 
+
                   {/* <label>ID</label> */}
                   {/* <input */}
                   {/*   type="text" */}

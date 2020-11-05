@@ -15,6 +15,7 @@
 	top:0;
 	z-index:20;
 	overflow:auto;
+	
 }
 .menu-header{
 	width:100%;
@@ -89,7 +90,9 @@ display:none;
 	background:rgba(0,0,0,.1);
 	display:block;
 }
-
+.dot{
+	font-size:.75rem;
+}
 .angle{
 transition:.1s;	
 /*transform: rotate(-90deg);*/

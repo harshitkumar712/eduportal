@@ -1,7 +1,13 @@
-.ck-editor__editable {
+/*.ck-editor__editable {
 min-height: 75vh !important;
 }
+*/
 
+.cke_editable
+{
+    
+    line-height: 0.6 !important;
+}
 .addarticle{
 	margin-top:10vh;
 	margin-left:18vw;

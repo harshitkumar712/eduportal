@@ -34,7 +34,7 @@ function App() {
             component={AddSubCategory}
           ></Route>
           <Route
-            path="/admin/viewarticle/article/:id"
+            path="/admin/viewarticle/article"
             component={ShowArticle}
           ></Route>
         </div>

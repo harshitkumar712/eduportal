@@ -155,13 +155,18 @@ const ViewArticle = (props) => {
                   <div>Total Count:{articleData.length}</div>
                   <p>
                     Rows per Page &nbsp;
-                    <input
+                    <select
+                      // className="form-control"
+                      name="name"
+                      
                       onChange={handlePerPage}
-                      type="number"
-                      min="10"
-                      max="50"
-                      step="10"
-                    />
+                    >
+                      <option value="10">10</option>
+                      <option value="20">20</option>
+                      <option value="30">30</option>
+                      <option value="40">40</option>
+                      <option value="50">50</option>
+                    </select>
                   </p>
                 </div>
                 <Pagination

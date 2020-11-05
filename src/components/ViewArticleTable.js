@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Loader from 'react-loader-spinner';
 const ViewArticleTable = ({ articleData, loading }) => {
 	const row = loading ? (
+		articleData.length ? (
 		articleData.map((item, index) => {
 			return (
 				<React.Fragment key={index}>
@@ -14,7 +16,7 @@ const ViewArticleTable = ({ articleData, loading }) => {
 						<td>
 							<Link
 								to={{
-									pathname: `/admin/viewarticle/article/${item.artId}`,
+									pathname: `/admin/viewarticle/article`,
 
 									body: item.body,
 								}}
@@ -24,7 +26,7 @@ const ViewArticleTable = ({ articleData, loading }) => {
 							/
 							<Link
 								to={{
-									pathname: `/admin/viewarticle/article/${item.id}`,
+									pathname: `/admin/viewarticle/article`,
 
 									body: item.body,
 								}}
@@ -37,9 +39,15 @@ const ViewArticleTable = ({ articleData, loading }) => {
 				</React.Fragment>
 			);
 		})
+		): (
+			<tr>
+				<td colSpan="6">No results found</td>
+			</tr>
+		)
 	) : (
 		<tr>
-			<td colSpan="6">LOADING ARTICLES</td>
+			<td colSpan="6">
+			<Loader type="ThreeDots" color="#A81838" height={40} width={40} /></td>
 		</tr>
 	);
 

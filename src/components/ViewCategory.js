@@ -158,7 +158,18 @@ const handleSubmit = (event) => {
 		<div>
 			<div>Total Count:{categoryData.length}</div>
 	<p>Rows per Page &nbsp;
-	<input onChange={handlePerPage} type="number"  min="10" max="50" step="10"/></p></div>
+	 <select
+                      // className="form-control"
+                      name="name"
+                      
+                      onChange={handlePerPage}
+                    >
+                      <option value="10">10</option>
+                      <option value="20">20</option>
+                      <option value="30">30</option>
+                      <option value="40">40</option>
+                      <option value="50">50</option>
+                    </select></p></div>
 <Pagination perPage={perPage} totalLength={categoryData.length} paginate={paginate} currentPage={currentPage} /></div>
 <ViewCategoryTable categoryData={currentData} loading={loading}/>
 </div>

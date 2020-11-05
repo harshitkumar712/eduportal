@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/dropdown.css";
 const DropdownData = [
-	{ id: 1, subtitle: "Back to Home", path: "/admin" },
+	// { id: 1, subtitle: "Back to Home", path: "/admin" },
 	{ id: 2, subtitle: "View Users", path: "/admin/viewuser" },
 	{ id: 3, subtitle: "Add Sub Admin", path: "/admin/addsubadmin" },
 	{ id: 3, subtitle: "View Sub Admin", path: "/admin/viewsubadmin" },

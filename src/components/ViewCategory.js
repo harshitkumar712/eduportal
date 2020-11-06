@@ -47,7 +47,6 @@ const paginate =(pageNumber)=>{
 }
 
 const handlePerPage=(e)=>{
-	console.log(e.target.value);
 	setPerPage(e.target.value);
 }
 
